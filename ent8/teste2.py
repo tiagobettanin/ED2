@@ -5,7 +5,7 @@ def grep(string):
         with open('./animes.csv', 'r', encoding='utf-8') as f:
             for linha in f:
                 linha = linha.strip('\n')
-                campos = linha.split('|')
+                campos = linha.split(',')
                 if string in campos:
                     registros_encontrados.add(linha)
     except FileNotFoundError as e:
@@ -25,7 +25,7 @@ def grep_com_indices(string):
         with open('./animes.csv', 'r', encoding='utf-8') as f:
             for i, linha in enumerate(f):
                 linha = linha.strip('\n')
-                campos = linha.split('|')
+                campos = linha.split(',')
                 if string in campos:
                     resultado.append((i, linha))  # RRN, Registro
     except FileNotFoundError:
