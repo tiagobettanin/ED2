@@ -59,23 +59,21 @@ def aplicar_algoritmo(nome, funcao, vetor_original, arquivo_saida):
 def main():
     # Verifica se os dois arquivos (entrada e saída) foram informados
     
-    #if len(sys.argv) != 3:
-     #   print("Uso correto: python programa.py entrada.txt saida.txt")
-     #   return
+    if len(sys.argv) != 3:
+        print("Uso correto: python programa.py entrada.txt saida.txt")
+        return
 
-    # Lê os nomes dos arquivos da linha de comando
-    #arquivo_entrada = sys.argv[1]
-    #arquivo_saida = sys.argv[2]
+    # Lê os nomes dos arquivoacas da linha de comando
+    arquivo_entrada = sys.argv[1]
+    arquivo_saida = sys.argv[2]
     
-    arquivo_entrada = 'input1.txt'
-    arquivo_saida = 'output1.txt'
     
     import os
     print("Diretório atual:", os.getcwd())
 
     try:
-        # Lê o tamanho do vetor e o tipo de geração ('c', 'd' ou 'r')
-        with open('./input1.txt', 'r') as entrada:
+        # Lê o tamanho do vetor e on tipo de geração ('c', 'd' ou 'r')
+        with open(arquivo_entrada, 'r') as entrada:
             linhas = entrada.readlines()
             tamanho = int(linhas[0])
             tipo_vetor = linhas[1].strip()
