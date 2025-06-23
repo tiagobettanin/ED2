@@ -1,13 +1,18 @@
 from indicePrimario import * 
 
+from indiceSecundario import *
+
 if __name__ == '__main__':
     
     arqDados = "arquivoDadosRegistrosFixos.txt"
     arqIndices = "indice.txt"
+    arqIndices2 = "indiceSecundario.txt"
    
     # criando o indice primario    
     arrayIndices = indicePrimario(arqDados=arqDados, 
                                   arqIndices=arqIndices)
+    
+    
     
     # destruir
     # inserir
